@@ -1,78 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PRIMEMOTOEXPORT LTD</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMEMOTOEXPORT LTD</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, Inter, sans-serif;
+            color: #0f1214;
+            background: #ffffff;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 50px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-nav {
+            height: 40px;
+        }
+
+        .brand {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .nav-right a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: #0f1214;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .nav-right a:hover {
+            opacity: 0.6;
+        }
+
+        /* HERO */
+        .hero {
+            background: url('hero.jpg') center/cover no-repeat;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 56px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        .cta {
+            display: inline-block;
+            background: #e6b100;
+            color: #0f1214;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        /* SECTION GENERIC */
+        .section {
+            padding: 110px 50px;
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .card {
+            padding: 30px;
+            border-radius: 12px;
+            background: #f6f7f8;
+            width: 300px;
+            text-align: left;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+        }
+
+        /* ABOUT */
+        .about-text {
+            max-width: 700px;
+            margin: 20px auto 0;
+            line-height: 1.6;
+        }
+
+        /* CONTACT */
+        .contact-section a {
+            color: #0f1214;
+            font-weight: 600;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0f1214;
+            color: #ffffff;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="logo">PRIMEMOTOEXPORT</div>
+<header class="navbar">
+    <div class="nav-left">
+        <img src="logo.png" class="logo-nav" alt="PrimeMotoExport Logo">
+        <span class="brand">PRIMEMOTOEXPORT LTD</span>
+    </div>
+    <nav class="nav-right">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-inner">
-    <h1>UK Motorcycle Gear Export</h1>
-    <p>Certified moto equipment from UK & EU suppliers.  
-       Reliable sourcing. Transparent pricing. Fast logistics.</p>
-
-    <div class="cta-block">
-      <a href="mailto:sales@primemotoexport.co.uk" class="btn primary">Contact Sales</a>
-      <a href="mailto:info@primemotoexport.co.uk" class="btn outline">General Enquiries</a>
+    <div class="hero-content">
+        <h1>Premium Export & Logistics</h1>
+        <p>Reliable sourcing, procurement, and international shipping services from the United Kingdom.</p>
+        <a href="#contact" class="cta">Contact us</a>
     </div>
-  </div>
 </section>
 
-<section class="section about">
-  <h2>About the Company</h2>
-  <p><strong>PRIMEMOTOEXPORT LTD</strong> is a registered UK export company (No. 16858813),
-  specialising in wholesale sourcing and export of certified motorcycle equipment.</p>
-
-  <p>We work directly with UK and EU manufacturers, ensuring competitive pricing,
-  verified products, and full export documentation for international distributors.</p>
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Sourcing & Procurement</h3>
+            <p>Access to verified UK suppliers with transparent pricing and quality control.</p>
+        </div>
+        <div class="card">
+            <h3>Logistics & Export</h3>
+            <p>Comprehensive coordination: packing, documentation, and international dispatch.</p>
+        </div>
+        <div class="card">
+            <h3>Registered Export Operations</h3>
+            <p>Corporate structure optimised for international clients and VAT-efficient exports.</p>
+        </div>
+    </div>
 </section>
 
-<section class="section export">
-  <h2>What We Export</h2>
-  <div class="grid">
-    <div class="card">Heated motorcycle clothing</div>
-    <div class="card">Protective gear (jackets, trousers, armour)</div>
-    <div class="card">Touring & travel accessories</div>
-    <div class="card">Seasonal gear & winter equipment</div>
-    <div class="card">Bulk dealer consignments</div>
-    <div class="card">Specialised UK/EU sourcing</div>
-  </div>
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p class="about-text">
+        PRIMEMOTOEXPORT LTD is a London-based export company providing premium sourcing 
+        and logistics solutions for international clients.  
+        We ensure transparency, reliability, and professional standards at every stage.
+    </p>
 </section>
 
-<section class="section why">
-  <h2>Why Export from the UK</h2>
-  <div class="why-grid">
-    <div class="why-item"><span>0% VAT</span> on all exports</div>
-    <div class="why-item"><span>20–45% Discounts</span> from manufacturers</div>
-    <div class="why-item"><span>Certified</span> UK & EU equipment</div>
-    <div class="why-item"><span>Transparent</span> documentation & logistics</div>
-  </div>
+<section id="contact" class="section contact-section">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:info@primemotoexport.co.uk">info@primemotoexport.co.uk</a></p>
+    <p>Registered in London, UK</p>
 </section>
 
-<section class="section process">
-  <h2>Process</h2>
-  <ol>
-    <li>Purchase order</li>
-    <li>Supplier sourcing & price confirmation</li>
-    <li>Invoice & export documentation</li>
-    <li>0% VAT processing</li>
-    <li>Shipping & freight arrangements</li>
-    <li>Customs paperwork</li>
-  </ol>
-</section>
-
-<footer class="footer">
-  <p><strong>Sales:</strong> sales@primemotoexport.co.uk</p>
-  <p><strong>General:</strong> info@primemotoexport.co.uk</p>
-  <p>71-75 Shelton Street, London, WC2H 9JQ, UK</p>
+<footer>
+    © 2025 PRIMEMOTOEXPORT LTD — All rights reserved.
 </footer>
 
 </body>
