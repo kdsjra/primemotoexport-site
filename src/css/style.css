@@ -56,6 +56,12 @@ layer(base);
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
+  /* Prevent WOW.js flash of content - but not in header */
+  section .wow,
+  footer .wow {
+    visibility: hidden;
+  }
 }
 
 @utility header {
