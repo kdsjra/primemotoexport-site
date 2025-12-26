@@ -1,6 +1,6 @@
     <!-- ===== Footer Start ===== -->
     <footer
-      class="wow fadeInUp pt-14 sm:pt-20 lg:pt-[130px]"
+      class="wow fadeInUp pt-14 sm:pt-20 lg:pt-[130px] pb-20 lg:pb-0"
       data-wow-delay=".2s"
     >
       <div class="px-4 xl:container">
@@ -63,15 +63,20 @@
               <p class="font-heading text-dark-text mb-6 text-base">
                 Subscribe to receive future updates
               </p>
-              <form class="relative">
+              <form class="relative" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="1fd53134-ca87-4910-97f0-9df852a75058">
+                <input type="hidden" name="subject" value="New Newsletter Subscription - PRIMEMOTOEXPORT">
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
                 <input
                   type="email"
                   name="email"
-                  id="email"
+                  id="newsletter-email"
                   placeholder="Email address"
+                  required
                   class="pladeholder-opacity-40 text-dark-text focus:border-primary w-full rounded-sm border py-3 pr-12 pl-5 text-base outline-hidden dark:border-transparent dark:bg-[#2C3443]"
                 />
                 <button
+                  type="submit"
                   class="text-dark-text absolute top-0 right-0 flex h-full w-12 items-center justify-center border-l dark:border-[#1F2633]"
                 >
                   <svg
