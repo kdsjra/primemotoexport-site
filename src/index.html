@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRIMEMOTOEXPORT LTD - Premium Motorcycle Accessories & Parts Export</title>
+  </head>
+
+  <body class="dark:bg-dark">
+    <include src="./includes/header.html"></include>
+    <include src="./includes/hero.html"></include>
+    <include src="./includes/services.html"></include>
+    <include src="./includes/about.html"></include>
+    <include src="./includes/contact.html"></include>
+    <include src="./includes/footer.html"></include>
+
+    <!-- ====== Back To Top Start ===== -->
+    <a
+      href="javascript:void(0)"
+      class="hover:shadow-signUp back-to-top bg-primary fixed right-8 bottom-8 left-auto z-999 hidden h-10 w-10 items-center justify-center rounded-xs text-white shadow-md transition"
+    >
+      <span
+        class="mt-[6px] h-3 w-3 rotate-45 border-t border-l border-white"
+      ></span>
+    </a>
+    <!-- ====== Back To Top End ===== -->
+
+    <script>
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".menu-scroll");
+        const scrollPos =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
+
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (
+            refElement.offsetTop <= scrollTopMinus &&
+            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+          ) {
+            document.querySelector(".menu-scroll").classList.remove("active");
+            currLink.classList.add("active");
+          } else {
+            currLink.classList.remove("active");
+          }
+        }
+      }
+
+      window.document.addEventListener("scroll", onScroll);
+      // ==== About Tabs
+      const tabButtons = document.querySelectorAll(".tabButtons button");
+      const tabPanels = document.querySelectorAll(".tabPanel");
+
+      function showPanel(panelIndex) {
+        tabButtons.forEach(function (node) {
+          node.classList.remove(
+            "text-primary",
+            "border-primary",
+            "dark:border-primary",
+          );
+        });
+        tabButtons[panelIndex].classList.add(
+          "text-primary",
+          "dark:text-white",
+          "border-primary",
+          "dark:border-primary",
+        );
+        tabPanels.forEach(function (node) {
+          node.style.display = "none";
+        });
+        tabPanels[panelIndex].style.display = "flex";
+      }
+      showPanel(0);
+    </script>
+  </body>
+</html>
